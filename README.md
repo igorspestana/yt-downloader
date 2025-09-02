@@ -1,5 +1,7 @@
 # YouTube Downloader
 
+![Interface do YouTube Downloader](interface.png)
+
 Um software em Python para fazer download de vídeos do YouTube com interface gráfica moderna.
 
 ## Características
@@ -18,7 +20,23 @@ Um software em Python para fazer download de vídeos do YouTube com interface gr
 ### 1. **Instalar Python** (versão 3.7 ou superior)
    - Baixe em: https://www.python.org/downloads/
 
-### 2. **Instalar FFmpeg** (Obrigatório para qualidades 720p, 480p, 360p)
+### 2. **Instalar dependências do sistema**
+
+#### **Instalar tkinter (Interface gráfica)**
+```bash
+# Ubuntu/Debian
+sudo apt update
+sudo apt install python3-tk
+
+# CentOS/RHEL/Fedora
+sudo yum install python3-tkinter  # CentOS/RHEL
+sudo dnf install python3-tkinter  # Fedora
+
+# macOS
+brew install python-tk
+```
+
+#### **Instalar FFmpeg** (Obrigatório para qualidades 720p, 480p, 360p)
 
 #### **Windows:**
 1. Acesse: https://ffmpeg.org/download.html
@@ -62,15 +80,33 @@ sudo port install ffmpeg
 ```
 
 ### 3. **Instalar dependências Python**
-   ```bash
-   pip install -r requirements.txt
-   ```
+
+#### **Ambiente Virtual**
+```bash
+# Criar um ambiente virtual
+python3 -m venv venv
+
+# Ativar o ambiente virtual
+source venv/bin/activate  # Linux/macOS
+# ou
+venv\Scripts\activate     # Windows
+
+# Instalar dependências
+pip install -r requirements.txt
+```
 
 ## Como usar
 
 ### Interface Gráfica (Recomendado)
 
-1. Execute o programa principal:
+1. **Se estiver usando ambiente virtual, ative-o primeiro:**
+   ```bash
+   source venv/bin/activate  # Linux/macOS
+   # ou
+   venv\Scripts\activate     # Windows
+   ```
+
+2. Execute o programa principal:
    ```bash
    python youtube_downloader.py
    ```

@@ -1,3 +1,2 @@
-yt-dlp==2023.12.30
-tkinter
-customtkinter==5.2.0 
+yt-dlp>=2024.12.09
+customtkinter>=5.2.2 
